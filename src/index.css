@@ -29,5 +29,6 @@ ul {
 }
 
 .active {
-  border: 2px solid #0303ab;
+  background: linear-gradient(to bottom right, #2b2baf, transparent),
+    linear-gradient(to top left, rgb(68 68 70), transparent);
 }

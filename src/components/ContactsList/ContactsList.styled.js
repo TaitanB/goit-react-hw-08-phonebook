@@ -62,9 +62,10 @@ export const ContactItem = styled.li`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* margin-bottom: 10px; */
   gap: 10px;
   width: 100%;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #0303ab;
 
   p {
     font-weight: 500;

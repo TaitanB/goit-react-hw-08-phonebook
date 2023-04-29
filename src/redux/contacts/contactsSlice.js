@@ -7,7 +7,7 @@ import {
 
 const contactsSlice = createSlice({
   name: 'contacts',
-  initialState: { items: [], isloading: false, error: null },
+  initialState: { items: [], error: null },
 
   extraReducers: builder => {
     builder
@@ -18,7 +18,6 @@ const contactsSlice = createSlice({
         state.error = payload;
       })
       .addCase(fetchAddContact.fulfilled, (state, { payload }) => {
-        // console.log(payload);
         state.items.push(payload);
       })
       .addCase(fetchAddContact.rejected, (state, { payload }) => {

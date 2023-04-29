@@ -24,8 +24,7 @@ import noContacts from '../../image/noContacts.jpg';
 const ContactsList = filter => {
   const filteredContacts = useSelector(getFilteredContacts);
   const allContacts = useSelector(getAllContacts);
-  // console.log(filteredContacts);
-  // console.log(filter);
+
   const dispatch = useDispatch();
 
   const deleteContact = id => {
@@ -36,10 +35,9 @@ const ContactsList = filter => {
     <Wraper>
       <div>
         <Title>Your contacts</Title>
-        {filteredContacts.length !== 0 ? (
+        {allContacts.length !== 0 ? (
           <ContactList>
             {filteredContacts.map(({ id, name, number }) => {
-              // console.log(id, name, number);
               return (
                 <ContactItem key={id} id={id}>
                   <p>

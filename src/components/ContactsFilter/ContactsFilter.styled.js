@@ -18,7 +18,6 @@ export const Label = styled.label`
   gap: 10px;
   font-weight: 500;
   font-size: 20px;
-  /* width: 360px; */
   align-items: center;
   margin: 0 auto;
   justify-content: space-between;

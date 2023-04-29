@@ -17,18 +17,14 @@ export default function ContactsForm() {
   const dispatch = useDispatch();
 
   const handleChange = event => {
-    // console.log('handleChange');
-    // console.log(event);
     const { name, value } = event.currentTarget;
 
     switch (name) {
       case 'name':
-        // console.log('case name');
         setName(value);
         break;
 
       case 'number':
-        // console.log('case number');
         setNumber(value);
         break;
 
@@ -38,19 +34,13 @@ export default function ContactsForm() {
   };
 
   const handleSubmit = event => {
-    // console.log('handleSubmit');
-    // console.log(event);
     event.preventDefault();
 
     dispatch(fetchAddContact({ name, number }));
-    // console.log(name, number);
-    // console.log(event.target.elements.name.value);
     reset();
   };
 
   const reset = () => {
-    // console.log('reset');
-
     setName('');
     setNumber('');
   };

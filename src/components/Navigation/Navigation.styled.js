@@ -9,10 +9,9 @@ export const Nav = styled.nav`
 export const Link = styled(NavLink)`
   font-weight: 600;
   font-size: 20px;
-  line-height: 1;
   color: rgb(232 238 245);
   text-decoration: none;
-  padding: 10px;
+  padding: 5px 10px;
   border-radius: 5px;
 
   :hover,

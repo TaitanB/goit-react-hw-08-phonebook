@@ -10,10 +10,8 @@ const ContactsFilter = filter => {
   const dispatch = useDispatch();
 
   const handleChangeFilter = event => {
-    // console.log(event);
     const { value } = event.currentTarget;
     dispatch(getFilter(value));
-    // console.log(value);
   };
 
   return (
