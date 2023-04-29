@@ -7,6 +7,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.2;
 }
 
 code {
@@ -14,11 +16,18 @@ code {
     monospace;
 }
 
-p {
+p,
+h1,
+h2,
+h3 {
   margin: 0;
 }
 
 ul {
   padding: 0;
   margin: 0;
+}
+
+.active {
+  border: 2px solid #0303ab;
 }

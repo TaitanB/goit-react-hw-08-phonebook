@@ -11,3 +11,5 @@ export const getFilteredContacts = state => {
   });
   return result;
 };
+
+export const selectLoading = state => state.contacts.loading;

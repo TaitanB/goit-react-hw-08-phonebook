@@ -1,34 +1,38 @@
 import styled from 'styled-components';
 
-export const FormAddContact = styled.form`
+export const LogForm = styled.form`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
-  padding: 30px;
-  border: 1px solid blue;
+  max-width: 320px;
+  background-color: #ffffff75;
+  padding: 20px;
   border-radius: 20px;
-  background-color: rgb(112 174 207);
 `;
 
 export const Label = styled.label`
+  font-size: 18px;
+  font-weight: 600;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  font-weight: 500;
-  align-items: center;
+  gap: 20px;
+  width: 100%;
+  justify-content: space-between;
 `;
 
 export const Input = styled.input`
-  background-color: rgb(213 239 230);
-  border: 1px solid blue;
-  border-radius: 5px;
+  background-color: rgba(213, 222, 239, 0.8);
   padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: inset rgba(0, 0, 1, 0.2) 0 0 3px 3px;
 `;
 
-export const BtnContact = styled.button`
+export const LogBtn = styled.button`
+  text-decoration: none;
   margin: auto;
   padding: 5px 10px;
-  border: 1px solid blue;
+  border: 1px solid #0303ab;
   border-radius: 5px;
   background-color: #0303ab;
   color: rgb(213 239 230);
@@ -38,6 +42,7 @@ export const BtnContact = styled.button`
   :hover,
   :focus {
     background-color: green;
+    border: 1px solid green;
     scale: 0.9;
   }
 `;

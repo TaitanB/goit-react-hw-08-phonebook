@@ -1,17 +1,24 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { fetchAddContact } from '../../redux/operations';
+import { fetchAddContact } from '../../redux/contacts/operations';
 
-import { FormAddContact, Label, Input, BtnContact } from './Form.styled';
+import {
+  FormAddContact,
+  Label,
+  Input,
+  BtnContact,
+  FormTitle,
+} from './ContactsForm.styled';
 
-export default function Form() {
+export default function ContactsForm() {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const dispatch = useDispatch();
+
   const handleChange = event => {
     // console.log('handleChange');
-
+    // console.log(event);
     const { name, value } = event.currentTarget;
 
     switch (name) {
@@ -32,10 +39,9 @@ export default function Form() {
 
   const handleSubmit = event => {
     // console.log('handleSubmit');
-
+    // console.log(event);
     event.preventDefault();
-    // onSubmit({ name, number });
-    // const form = event.target;
+
     dispatch(fetchAddContact({ name, number }));
     // console.log(name, number);
     // console.log(event.target.elements.name.value);
@@ -51,6 +57,7 @@ export default function Form() {
 
   return (
     <FormAddContact onSubmit={handleSubmit}>
+      <FormTitle>Add a new contact?</FormTitle>
       <Label>
         Name
         <Input
